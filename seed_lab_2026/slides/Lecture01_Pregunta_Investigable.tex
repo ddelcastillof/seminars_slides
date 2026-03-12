@@ -1,0 +1,816 @@
+% ==============================================================================
+% Lecture 01: Del interés al problema
+% Cómo identificar una pregunta investigable y viable
+% SeedLab — SCORE UNMSM
+% ==============================================================================
+% Revision history:
+%   v1  2026-03-06  Initial creation
+%   v2  2026-03-06  Slide-excellence fixes: split dense frames, section dividers,
+%                   Hulley citation, fix 'desarrollado por', \scriptsize→\small
+%   v3  2026-03-06  Pedagogy-review fixes: 5-step flow model, PICO variants to appendix,
+%                   step-by-step fix frame in [G]
+%   v4  2026-03-07  Overflow fixes (slides 6,7,13,14,22,24); online format
+%                   adaptation (slide 12: pair exercise -> DM2 worked example);
+%                   IFMSA->SCORE/SeedLab rebrand; DA fixes C1-C4+C6;
+%                   proofreading fixes M1-M5 + L1-L6
+% ==============================================================================
+
+\documentclass[12pt, aspectratio=169]{beamer}
+
+\input{header}
+
+% --- Metadata -----------------------------------------------------------------
+\title[Del interés al problema]{Del interés al problema}
+\subtitle{Cómo identificar una pregunta investigable y viable}
+\author[SCORE--UNMSM]{SeedLab}
+\institute[SCORE--UNMSM]{SCORE -- UNMSM}
+\date{Marzo 2026}
+
+% ==============================================================================
+\begin{document}
+% ==============================================================================
+
+% [A] ------------------------------------------------------------------
+% PORTADA — slide 1
+% ----------------------------------------------------------------------
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% [B] ------------------------------------------------------------------
+% MOTIVACIÓN — slides 2–4
+% ----------------------------------------------------------------------
+
+\begin{frame}{¿Por qué todo empieza en la pregunta?}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{keybox}[El reloj perdido]
+        \small
+        «Un investigador no es un buscador de tesoros en la playa.
+        Es alguien que perdió su reloj: \textbf{sabe exactamente qué busca},
+        puede describirlo, y lo reconoce cuando lo encuentra.»
+        \vspace{2pt}
+        \begin{flushright}
+          \scriptsize\textit{\textcite{Vandenbroucke2018_ideas}}
+        \end{flushright}
+      \end{keybox}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \vspace{4pt}
+      \small                          % M-V1: was \scriptsize
+      \textbf{Sin pregunta definida:}\\[2pt]
+      $\Rightarrow$ Datos «interesantes» sin dirección\\
+      $\Rightarrow$ Análisis a la deriva\\
+      $\Rightarrow$ Resultados difíciles de interpretar\\[6pt]
+      \textbf{Con pregunta definida:}\\[2pt]
+      $\Rightarrow$ Cada decisión metodológica tiene rumbo\\
+      $\Rightarrow$ Los resultados responden algo concreto\\
+      $\Rightarrow$ El aporte es claro desde el inicio
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{El problema real: datos sin preguntas}
+  \begin{center}
+    \Large\textbf{Nunca ha habido tantos datos.\\[4pt]
+    Nunca ha habido tantas malas preguntas.}
+  \end{center}
+
+  \medskip
+  \begin{itemize}
+    \item Estudios que replican hallazgos conocidos sin agregar valor
+    \item Tesis construidas «de atrás para adelante» (resultados primero)
+    \item Preguntas tan amplias que ningún estudio podría responderlas
+    \item Preguntas tan estrechas que la respuesta no le importa a nadie
+  \end{itemize}
+
+  \medskip
+  \begin{warningbox}[El verdadero cuello de botella]
+    \small La escasez no está en los datos ni en las herramientas
+    estadísticas. Está en las \textbf{preguntas bien formuladas}.
+  \end{warningbox}
+\end{frame}
+
+\begin{frame}{Hoja de ruta del taller}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{Hoy aprenderás a:}
+      \begin{itemize}
+        \item Identificar fuentes de ideas de investigación
+        \item Convertir una idea vaga en una pregunta concreta
+        \item Evaluar una pregunta con los criterios \textbf{FINER}
+        \item Estructurar una pregunta con el esquema \textbf{PICO}
+        \item Evitar los errores más comunes
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Estructura:}
+      \begin{enumerate}
+        \small
+        \item[\textbf{B}] Motivación
+        \item[\textbf{C}] ¿De dónde nacen las ideas?
+        \item[\textbf{D}] De la idea al problema
+        \item[\textbf{E}] Criterios FINER
+        \item[\textbf{F}] Errores comunes
+        \item[\textbf{G}] Herramienta: PICO
+        \item[\textbf{H}] Cierre
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% [C] ------------------------------------------------------------------
+% ¿DE DÓNDE NACEN LAS IDEAS? — slides 5–8
+% ----------------------------------------------------------------------
+
+\begin{frame}{Todos comenzamos igual: curiosidad clínica}
+  \begin{examplebox}[Tres escenas comunes]
+    \small
+    \begin{enumerate}
+      \item Un interno nota que el 80\% de sus pacientes diabéticos presentan
+            mal control glucémico: ¿por qué?
+      \item Una estudiante lee que la prevalencia de anemia en gestantes peruanas
+            es del 28\%: ¿ha cambiado en la última década?
+      \item Un médico observa que los pacientes jóvenes con HTA raramente
+            cumplen el tratamiento: ¿qué factores influyen?
+    \end{enumerate}
+  \end{examplebox}
+
+  \medskip
+  \begin{keybox}
+    \small
+    La curiosidad clínica \textbf{es el punto de partida legítimo}.
+    El proceso de investigación la transforma en pregunta formal.
+  \end{keybox}
+\end{frame}
+
+\begin{frame}{Fuentes de ideas: regularidades y anomalías}
+  \textcite{Vandenbroucke2018_ideas} distinguen dos motores:
+
+  \smallskip
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \textbf{Regularidades}\\[2pt]
+      \small
+      Patrones que se repiten sin explicación:\\[2pt]
+      \begin{itemize}
+        \item «Siempre veo esto en mi servicio»
+        \item «La literatura lo describe pero no explica el mecanismo»
+        \item Estadísticas epidemiológicas inesperadas
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \textbf{Anomalías}\\[2pt]
+      \small
+      Casos o datos que no encajan:\\[2pt]
+      \begin{itemize}
+        \item «Este paciente no respondió como debía»
+        \item «Este dato contradice la guía»
+        \item Hallazgos incidentales en estudios previos
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+  \smallskip
+  \begin{keybox}
+    \small
+    Ambas son válidas. La clave es \textbf{tomar nota} en el momento
+    y volver a ellas con una mirada sistemática.
+  \end{keybox}
+\end{frame}
+
+\begin{frame}{Taxonomía práctica: cuatro fuentes para estudiantes}
+  % M-PR1: formal citation replacing Hulley & Cummings (informal)
+  Adaptado de \textcite{Hulley2013_designing}:
+
+  \smallskip
+  \begin{tabular}{@{}p{0.22\textwidth} p{0.68\textwidth}@{}}
+    \toprule
+    \textbf{Fuente} & \textbf{Ejemplo} \\
+    \midrule
+    Práctica clínica & ¿Qué tan frecuente es el diagnóstico tardío de TB en Lima? \\[1pt]
+    Literatura & Un metanálisis muestra inconsistencias que necesitan resolución \\[1pt]
+    Noticias / política & Nueva política de vacunación: ¿qué efecto tuvo en cobertura? \\[1pt]
+    Colegas / mentores & Tu asesor: «nadie ha estudiado esto en población peruana» \\
+    \bottomrule
+  \end{tabular}
+
+  \smallskip
+  \begin{examplebox}[Consejo práctico]
+    \small
+    Lleva una lista de preguntas pendientes. Revisar cada semana.
+    No todas serán investigables, pero \textbf{la cantidad genera calidad}.
+  \end{examplebox}
+\end{frame}
+
+\begin{frame}{Cómo cultivar tus ideas: el cuaderno de investigación}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \textbf{El hábito que cambia todo:}
+      \begin{itemize}
+        \item \textbf{Anota} toda observación llamativa
+        \item \textbf{Revisa} semanalmente (¿sigue siendo válida?)
+        \item \textbf{Busca} si ya fue estudiado (PubMed)
+        \item \textbf{Afina} hasta convertirla en pregunta
+        \item \textbf{Comparte} con un colega o asesor
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{keybox}[Darwin y sus cuadernos]
+        \footnotesize
+        Décadas de observación sistemática precedieron su
+        teoría de la evolución. No un «eureka» súbito —
+        \textbf{acumulación deliberada}.
+      \end{keybox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ==============================================================
+% SECTION DIVIDER [D]   (M-P1 — new slide)
+% ==============================================================
+\begin{frame}[plain]
+  \vfill
+  \centering
+  \begin{tcolorbox}[colback=sfPrimary, colframe=sfPrimary,
+                    width=0.72\textwidth, arc=4pt, boxrule=0pt,
+                    left=12pt, right=12pt, top=10pt, bottom=10pt]
+    \centering
+    \color{white}
+    \large\textbf{[D]}\\[4pt]
+    \Large\textbf{De la idea al problema}\\[8pt]
+    \normalsize\textit{Cómo afilar una observación hasta volverla investigable}
+  \end{tcolorbox}
+  \vfill
+\end{frame}
+
+% [D] ------------------------------------------------------------------
+% DE LA IDEA AL PROBLEMA — slides 10–13
+% ----------------------------------------------------------------------
+
+% C1-DA-FIX: split into diagram frame + questions frame (cognitive load)
+\begin{frame}{La idea es solo el inicio}
+  \begin{center}
+    \small\bfseries
+    Idea vaga
+    $\;\longrightarrow\;$
+    Observación
+    $\;\longrightarrow\;$
+    Pregunta bruta
+    $\;\longrightarrow\;$
+    Pregunta estructurada
+    $\;\longrightarrow\;$
+    {\color{sfPrimary}Pregunta investigable}\\[6pt]
+    {\normalfont\footnotesize\textit{%
+      «Me interesa la diabetes»\quad$\longrightarrow$\quad%
+      ¿Consejería y control glucémico en DM2, Lima?}}
+  \end{center}
+
+  \medskip
+  \begin{keybox}
+    \small
+    Una idea no es una pregunta. Una pregunta no es un protocolo.
+    \textbf{El camino tiene pasos — veamos cómo recorrerlos.}
+  \end{keybox}
+\end{frame}
+
+\begin{frame}{El proceso de afilado: cinco preguntas}
+  Para convertir una idea en pregunta investigable, responde:
+
+  \medskip
+  \begin{enumerate}
+    \item ¿En \textbf{qué población} específica?
+    \item ¿Cuál es el \textbf{fenómeno} de interés exacto?
+    \item ¿Hay una \textbf{comparación} implícita?
+    \item ¿Cuál sería el \textbf{resultado} que mediría?
+    \item ¿\textbf{Para qué} sirve saberlo?
+  \end{enumerate}
+
+  \medskip
+  \begin{keybox}
+    \small
+    Cada pregunta reduce el campo. Al final de las cinco,
+    tu idea se ha convertido en algo que puedes investigar.
+  \end{keybox}
+\end{frame}
+
+\begin{frame}{El concepto de «poda» (\textit{pruning})}
+  \textcite{Vandenbroucke2018_ideas}: afilar una pregunta es como podar un árbol.
+
+  \medskip
+  \begin{columns}[T]
+    \begin{column}{0.45\textwidth}
+      \textbf{Antes de podar:}\\[4pt]
+      \small
+      «Quiero estudiar los factores asociados
+      al control metabólico en enfermedades
+      crónicas en el Perú, considerando
+      aspectos socioeconómicos, acceso al
+      sistema de salud y comorbilidades.»\\[6pt]
+      \textcolor{boxOrange}{\textbf{Demasiado para un estudio}}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \textbf{Después de podar:}\\[4pt]
+      \small
+      «¿La adherencia al tratamiento
+      farmacológico se asocia con mejor
+      control glucémico en adultos con DM2
+      en el primer nivel de atención de
+      Lima, 2025--2026?»\\[6pt]
+      \textcolor{boxGreen}{\textbf{Enfocada, medible, viable}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% C2-DA-FIX: dropped — pruning slides (10-11) already show the DM2 transformation
+% C3-DA-FIX: "Objetivo latente" moved to section [F] (Errores comunes)
+
+\begin{frame}{El test «¿y qué?» / «¿a quién le importa?»}
+  \begin{examplebox}[¿Y qué? (So what?)]
+    \small
+    Si mi estudio demuestra lo que espero, \textbf{¿qué cambia?}
+    ¿Cambia la práctica clínica? ¿La política de salud?
+    ¿El conocimiento de un mecanismo biológico?
+  \end{examplebox}
+
+  \vspace{2pt}
+  \begin{examplebox}[¿A quién le importa?]
+    \small
+    ¿Quién usaría este resultado?
+    ¿Médicos, enfermeras, gestores, pacientes, ministerio?
+    Si no puedes identificar a nadie, reconsidera la pregunta.
+  \end{examplebox}
+
+  \vspace{2pt}
+  \begin{keybox}
+    \small
+    Una buena pregunta tiene un destinatario claro.
+    Si la respuesta no cambia nada para nadie, no vale el esfuerzo.
+  \end{keybox}
+\end{frame}
+
+% ==============================================================
+% SECTION DIVIDER [E]   (M-P1 — new slide)
+% ==============================================================
+\begin{frame}[plain]
+  \vfill
+  \centering
+  \begin{tcolorbox}[colback=sfPrimary, colframe=sfPrimary,
+                    width=0.72\textwidth, arc=4pt, boxrule=0pt,
+                    left=12pt, right=12pt, top=10pt, bottom=10pt]
+    \centering
+    \color{white}
+    \large\textbf{[E]}\\[4pt]
+    \Large\textbf{Criterios FINER}\\[8pt]
+    \normalsize\textit{El filtro de calidad para evaluar tu pregunta}
+  \end{tcolorbox}
+  \vfill
+\end{frame}
+
+% [E] ------------------------------------------------------------------
+% CRITERIOS FINER — slides 15–19
+% ----------------------------------------------------------------------
+
+\begin{frame}{Criterios FINER: el filtro de calidad}
+  % M-S1: was "desarrollado por" → corrected to "revisado en" (they review, not develop)
+  Propuesto por \textcite{Hulley2013_designing}, revisado en
+  \textcite{Hosseini2024_formulating} y \textcite{Covvey2024_basics}:
+
+  \medskip
+  \begin{center}
+    \begin{tabular}{@{}cll@{}}
+      \toprule
+      \textbf{Letra} & \textbf{Criterio} & \textbf{Pregunta que responde} \\
+      \midrule
+      \textbf{F} & \textit{Feasible} — Factible & ¿Puedo hacerlo con mis recursos? \\[3pt]
+      \textbf{I} & \textit{Interesting} — Interesante & ¿Le importa a la comunidad científica? \\[3pt]
+      \textbf{N} & \textit{Novel} — Novedosa & ¿Aporta algo que no se sabe? \\[3pt]
+      \textbf{E} & \textit{Ethical} — Ética & ¿Respeta a los participantes? \\[3pt]
+      \textbf{R} & \textit{Relevant} — Relevante & ¿Importa para la salud pública? \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+% C1 FIX — F14 split: keyboxes on own slide (was crammed with examplebox below)
+\begin{frame}{FINER: Factible, Interesante, Novedosa}
+  \begin{columns}[T]
+    \begin{column}{0.31\textwidth}
+      \begin{keybox}[F — Factible]
+        \small
+        \begin{itemize}
+          \item Tamaño muestral alcanzable
+          \item Tiempo disponible
+          \item Acceso a la población
+          \item Habilidades técnicas
+          \item Costo financiero
+        \end{itemize}
+      \end{keybox}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{keybox}[I — Interesante]
+        \small
+        \begin{itemize}
+          \item ¿Te motiva para meses de trabajo?
+          \item ¿Interesa a tu asesor?
+          \item ¿Relevante en el contexto local?
+        \end{itemize}
+      \end{keybox}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{keybox}[N — Novedosa]
+        \small
+        \begin{itemize}
+          \item Confirma o refuta hallazgos
+          \item Extiende a nueva población
+          \item Usa nueva metodología
+          \item Cubre brecha local
+        \end{itemize}
+      \end{keybox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% C1 FIX — F14b: examplebox on own slide (was at bottom of F14 causing shrink)
+\begin{frame}{¿Cuándo es «novedosa» para un estudiante?}
+  \begin{examplebox}[Novedosa no significa «nunca estudiado en el universo»]
+    \small
+    Estudiar adherencia a la metformina en la sierra rural peruana
+    \textbf{puede ser novedoso} aunque existan estudios en México o Europa.
+    El contexto local importa: diferencias de sistema de salud, barreras
+    geográficas, acceso a medicamentos, y características culturales
+    son todos factores que pueden producir resultados distintos.
+  \end{examplebox}
+
+  \medskip
+  \begin{keybox}
+    \small
+    Para un proyecto de pregrado o SCORE, la novedad local es suficiente.
+    \textbf{Aportar datos del contexto peruano ya es una contribución válida.}
+  \end{keybox}
+\end{frame}
+
+% C1 FIX — F15 split: E/R keyboxes on own slide
+\begin{frame}{FINER: Ética y Relevante}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{keybox}[E — Ética]
+        \small
+        \begin{itemize}
+          \item ¿Requiere aprobación del comité de ética?
+          \item ¿Expone a participantes a riesgo?
+          \item ¿La información es sensible?
+          \item ¿Hay conflicto de interés?
+        \end{itemize}
+        \vspace{3pt}
+        \textbf{Consultar al comité antes, no después.}
+      \end{keybox}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{keybox}[R — Relevante]
+        \small
+        \begin{itemize}
+          \item ¿Contribuye al conocimiento científico?
+          \item ¿Puede cambiar políticas de salud?
+          \item ¿Mejora la práctica clínica?
+          \item ¿Tiene importancia para el Perú?
+        \end{itemize}
+      \end{keybox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% C2+C4-FIX: FINER demo en vivo with DM2 protagonist example
+\begin{frame}{FINER en acción: evaluamos la pregunta DM2}
+  \begin{examplebox}[Pregunta DM2: adherencia farmacológica y control glucémico]
+    \footnotesize
+    \begin{tabular}{@{}p{0.17\linewidth} p{0.13\linewidth} p{0.54\linewidth}@{}}
+      \toprule
+      \textbf{Criterio} & \textbf{Nivel} & \textbf{Razonamiento} \\
+      \midrule
+      F — Factible    & \textcolor{boxGreen}{\textbf{Alto}}   & HCE disponibles; muestra en 1--2 centros \\
+      I — Interesante & \textcolor{boxGreen}{\textbf{Alto}}   & DM2: ceguera y amputación, primera causa en Perú \\
+      N — Novedosa    & \textcolor{boxOrange}{\textbf{Medio}} & Datos locales primer nivel: escasos \\
+      E — Ética       & \textcolor{boxGreen}{\textbf{Alto}}   & Retrospectivo; datos secundarios \\
+      R — Relevante   & \textcolor{boxGreen}{\textbf{Alto}}   & Estrategias de adherencia MINSA/EsSalud \\
+      \bottomrule
+    \end{tabular}
+  \end{examplebox}
+
+  \vspace{2pt}
+  \begin{keybox}
+    \footnotesize
+    \textbf{Veredicto:} pregunta lista para desarrollar. Aplica este filtro a tu propia idea.
+  \end{keybox}
+\end{frame}
+
+% ==============================================================
+% SECTION DIVIDER [F]   Errores comunes — ANTES de PICO (C1-FIX)
+% ==============================================================
+\begin{frame}[plain]
+  \vfill
+  \centering
+  \begin{tcolorbox}[colback=sfPrimary, colframe=sfPrimary,
+                    width=0.72\textwidth, arc=4pt, boxrule=0pt,
+                    left=12pt, right=12pt, top=10pt, bottom=10pt]
+    \centering
+    \color{white}
+    \large\textbf{[F]}\\[4pt]
+    \Large\textbf{Errores comunes}\\[8pt]
+    \normalsize\textit{Las trampas que debes reconocer antes de formular}
+  \end{tcolorbox}
+  \vfill
+\end{frame}
+
+% [F] ------------------------------------------------------------------
+% ERRORES COMUNES — antes de PICO para crear tensión motivacional
+% C3-DA-FIX: objetivo latente opens section [F] as root cause of all trampas
+% ----------------------------------------------------------------------
+
+% C3-DA-FIX: moved from section [D] — "objetivo latente" as conceptual root
+\begin{frame}{Objetivo latente vs.\ objetivo declarado}
+  \textit{¿Qué pasa cuando el investigador ya sabe qué resultado quiere
+  encontrar antes de diseñar el estudio?}
+  Concepto de Feinstein, recuperado por \textcite{Vandenbroucke2018_ideas}:
+
+  \smallskip
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{definitionbox}[Objetivo declarado]
+        \small
+        Lo que el investigador dice que estudia.\\[4pt]
+        «Determinar la prevalencia de anemia
+        ferropénica en gestantes adolescentes
+        del Hospital X.»
+      \end{definitionbox}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{definitionbox}[Objetivo latente]
+        \small
+        Lo que realmente quiere demostrar.\\[4pt]
+        «Mostrar que el programa de
+        suplementación no funciona
+        y necesita más recursos.»
+      \end{definitionbox}
+    \end{column}
+  \end{columns}
+
+  \smallskip
+  \begin{warningbox}[Riesgo]
+    \small
+    Si el objetivo latente no está alineado con el declarado,
+    el diseño puede sesgarse hacia el resultado deseado.
+    \textbf{Transparencia desde el inicio.}
+  \end{warningbox}
+\end{frame}
+
+\begin{frame}{Las trampas más frecuentes (I)}
+  \textcite{Covvey2024_basics} identifican tres fallas recurrentes:
+
+  \medskip
+  \begin{warningbox}[Pregunta demasiado amplia]
+    \small
+    «Factores asociados a enfermedades crónicas no transmisibles en el Perú.»\\
+    \textit{Imposible de responder en un solo estudio. Sin foco.}
+  \end{warningbox}
+
+  \medskip
+  \begin{warningbox}[Pregunta demasiado estrecha]
+    \small
+    «¿Cuál es la glucemia promedio de los 12 pacientes diabéticos de mi servicio
+    en la última semana?»\\
+    \textit{Sin potencial de generalización. No aporta al conocimiento.}
+  \end{warningbox}
+\end{frame}
+
+\begin{frame}{Las trampas más frecuentes (II)}
+  \begin{warningbox}[Pregunta mal especificada]
+    \small
+    «¿Es útil la metformina?»\\
+    \textit{Sin población, comparador, ni resultado.}
+  \end{warningbox}
+
+  \medskip
+  \begin{keybox}
+    \small
+    Las tres trampas tienen un origen común: la pregunta fue formulada
+    \textbf{antes} de pasar por el proceso de afilado.\\[4pt]
+    ¿Existe una herramienta sistemática para evitarlas?
+  \end{keybox}
+\end{frame}
+
+% ==============================================================
+% SECTION DIVIDER [G]   Herramienta: PICO — la solución (C1-FIX)
+% ==============================================================
+\begin{frame}[plain]
+  \vfill
+  \centering
+  \begin{tcolorbox}[colback=sfPrimary, colframe=sfPrimary,
+                    width=0.72\textwidth, arc=4pt, boxrule=0pt,
+                    left=12pt, right=12pt, top=10pt, bottom=10pt]
+    \centering
+    \color{white}
+    \large\textbf{[G]}\\[4pt]
+    \Large\textbf{Herramienta: PICO}\\[8pt]
+    \normalsize\textit{Cómo estructurar tu pregunta de investigación}
+  \end{tcolorbox}
+  \vfill
+\end{frame}
+
+% [G] ------------------------------------------------------------------
+% HERRAMIENTA: PICO
+% ----------------------------------------------------------------------
+
+\begin{frame}{¿Qué es PICO y para qué sirve?}
+  \begin{keybox}[PICO: el esqueleto de una pregunta clínica]
+    \small
+    PICO es un acrónimo que ayuda a \textbf{estructurar} preguntas en
+    investigación clínica y epidemiológica.
+    Fue desarrollado para búsquedas de evidencia
+    (EBM — \textit{medicina basada en evidencia}),
+    pero es igualmente útil para diseñar estudios propios.
+    \vspace{2pt}
+    \begin{flushright}
+      \scriptsize\textit{\parencite{Hosseini2024_formulating,Covvey2024_basics}}
+    \end{flushright}
+  \end{keybox}
+
+  \smallskip
+  \begin{center}
+    \normalsize
+    \textbf{P} — Población \qquad \textbf{I} — Intervención \\[2pt]
+    \textbf{C} — Comparador \qquad \textbf{O} — \textit{Outcome}
+  \end{center}
+
+  \smallskip
+  \begin{itemize}
+    \item Clarifica quiénes son los sujetos del estudio
+    \item Define qué se evalúa y contra qué
+    \item Especifica cómo se medirá el resultado
+    \item Facilita la búsqueda bibliográfica sistemática
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{PICO desglosado: cada componente}
+  \begin{tabular}{@{}p{0.1\textwidth} p{0.28\textwidth} p{0.52\textwidth}@{}}
+    \toprule
+    \textbf{Letra} & \textbf{Componente} & \textbf{Preguntas guía} \\
+    \midrule
+    \textbf{P} & Población /\newline Paciente & ¿Quiénes son? Edad, sexo, diagnóstico,
+                                                 setting, país \\[1pt]
+    \textbf{I} & Intervención /\newline Exposición & ¿Qué se hace o evalúa? Fármaco,
+                                                      programa, factor de riesgo \\[1pt]
+    \textbf{C} & Comparador /\newline Control & ¿Contra qué se compara? Placebo,
+                                                tratamiento estándar \\[1pt]
+    \textbf{O} & \textit{Outcome} /\newline Resultado & ¿Cómo se medirá el efecto?
+                                                         Variable primaria de resultado \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{2pt}
+  \begin{warningbox}[Consideraciones]
+    \footnotesize
+    \textbf{I vs.\ E:} Intervención (ensayos clínicos) vs.\ Exposición (estudios observacionales).\\
+    \textbf{C es opcional} en estudios descriptivos o de prevalencia.\\
+    PICO fue creado para búsquedas EBM; adaptarlo a diseño propio requiere ajustes.
+  \end{warningbox}
+\end{frame}
+
+\begin{frame}{PICO: formalizando nuestra pregunta DM2}
+  \begin{examplebox}[Construyendo el PICO — adherencia y control glucémico en DM2]
+    \small
+    \begin{tabular}{@{}lp{0.72\textwidth}@{}}
+      \textbf{P} & Adultos 30--65 años con DM2, centros de primer nivel Lima,
+                   2025--2026 \\[1pt]
+      \textbf{I/E} & Adherencia farmacológica alta ($>$80\% dosis prescritas) \\[1pt]
+      \textbf{C} & Adherencia baja ($\leq$80\%) \\[1pt]
+      \textbf{O} & Proporción con HbA1c $<$ 7\% a los 6 meses \\
+    \end{tabular}
+  \end{examplebox}
+
+  \smallskip
+  \begin{keybox}[Pregunta resultante]
+    \small
+    «En adultos 30--65 años con DM2 en el primer nivel de Lima (P),
+    ¿la alta adherencia farmacológica (I/E) vs.\ baja adherencia (C)
+    se asocia con mayor proporción de HbA1c $<$ 7\% a los 6 meses (O)?»
+  \end{keybox}
+\end{frame}
+
+\begin{frame}{De la pregunta débil a la pregunta fuerte}
+  \begin{columns}[T]
+    \begin{column}{0.47\textwidth}
+      \begin{warningbox}[Pregunta débil]
+        \small
+        «Quiero estudiar el estrés en estudiantes de medicina.»\\[4pt]
+        \textbf{Problemas:}
+        \begin{itemize}
+          \item ¿Qué estudiantes? ¿Dónde?
+          \item ¿Qué dimensión del estrés?
+          \item ¿Con qué instrumento?
+          \item ¿Para qué sirve el resultado?
+        \end{itemize}
+      \end{warningbox}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{examplebox}[Pregunta fuerte]
+        \small
+        «¿Cuál es la prevalencia de burnout
+        (Inventario de Burnout de Maslach)
+        en internos de Lima en 2025 y está
+        asociada al número de guardias
+        semanales?»\\[4pt]
+        \textbf{Tiene:} Población, exposición,
+        resultado medido, contexto.
+      \end{examplebox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% L1 FIX — step-by-step fix frame
+\begin{frame}{Paso a paso: de la pregunta débil a la fuerte}
+  Transformamos la pregunta débil aplicando PICO:
+
+  \smallskip
+  \begin{examplebox}[«Quiero estudiar el estrés en estudiantes de medicina»]
+    \small
+    \begin{enumerate}
+      \item \textbf{P — ¿Quiénes?} Internos de Lima (no «estudiantes en general»)
+      \item \textbf{I/E — ¿Qué fenómeno?} Burnout (Inventario de Burnout de Maslach, MBI)
+      \item \textbf{C — ¿Qué factor?} Número de guardias ($\geq 3$ vs.\ $<3$/semana)
+      \item \textbf{O — ¿Cómo se mide?} Prevalencia de burnout alto (escala MBI)
+    \end{enumerate}
+  \end{examplebox}
+
+  \smallskip
+  \begin{keybox}
+    \small
+    Resultado: «¿Cuál es la prevalencia de burnout (MBI) en internos
+    de Lima en 2025 y está asociada al número de guardias semanales?»
+  \end{keybox}
+\end{frame}
+
+% [H] ------------------------------------------------------------------
+% CIERRE
+% ----------------------------------------------------------------------
+
+\begin{frame}{Resumen: 5 preguntas antes de tu protocolo}
+  \begin{keybox}[5 preguntas antes de desarrollar tu protocolo]
+    \begin{enumerate}
+      \item \textbf{¿La pregunta es específica?}\\
+            \small Aplicar PICO: P, I/E, C (si aplica), O definidos con claridad.
+      \normalsize
+      \item \textbf{¿Supera el filtro FINER?}\\
+            \small Factible, Interesante, Novedosa, Ética, Relevante.
+      \normalsize
+      \item \textbf{¿Sabes qué cambiaría si la respondes?}\\
+            \small Test «¿y qué?» — si no cambia nada, reformula.
+      \normalsize
+      \item \textbf{¿El objetivo latente está alineado con el declarado?}\\
+            \small Transparencia metodológica desde el inicio.
+      \normalsize
+      \item \textbf{¿Hay alguien a quien le importe?}\\
+            \small Identifica un destinatario claro.
+    \end{enumerate}
+  \end{keybox}
+\end{frame}
+
+% C1 FIX — F23b: dedicated references slide
+\begin{frame}[allowframebreaks]{Referencias}
+  \small
+  \printbibliography[heading=none]
+\end{frame}
+
+% ==============================================================================
+% APÉNDICE
+% ==============================================================================
+
+\appendix
+
+\begin{frame}{Apéndice: variantes de PICO según diseño}
+  \textcite{Hosseini2024_formulating} describen varias adaptaciones:
+
+  \medskip
+  \begin{tabular}{@{}llp{0.55\textwidth}@{}}
+    \toprule
+    \textbf{Esquema} & \textbf{Extra} & \textbf{Uso principal} \\
+    \midrule
+    PEO   & E = Exposición & Estudios observacionales (cohortes, casos-controles) \\[4pt]
+    PICOS & S = Diseño     & Revisiones sistemáticas y metanálisis \\[4pt]
+    PICOT & T = Tiempo     & Cuando el seguimiento temporal es crítico \\[4pt]
+    PECO  & E = Exposición & Epidemiología ambiental y nutricional \\
+    \bottomrule
+  \end{tabular}
+
+  \medskip
+  \begin{keybox}
+    \small
+    El esquema correcto depende del \textbf{diseño de estudio} — tema del próximo taller.
+  \end{keybox}
+\end{frame}
+
+% ==============================================================================
+\end{document}
+% ==============================================================================

@@ -1,0 +1,192 @@
+% ==============================================================================
+% header.tex — Beamer Preamble
+% SeedLab — SCORE UNMSM
+% Facultad de Medicina San Fernando
+% ==============================================================================
+
+% --- Base theme -----------------------------------------------------------
+\usetheme{Madrid}
+\useinnertheme{rectangles}
+
+% --- Font -----------------------------------------------------------------
+% Use lmodern for reliable cross-platform Latin Modern support with XeLaTeX
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- Language & encoding --------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+
+% --- Color palette --------------------------------------------------------
+%  Primary:   Dark navy   #2C3E6B
+%  Secondary: Mid blue    #4A6FA5
+%  Accent:    Teal        #2E86AB
+%  Light:     Light grey  #F4F6F8
+%  Text:      Near-black  #1A1A2E
+
+\definecolor{sfPrimary}{HTML}{2C3E6B}
+\definecolor{sfSecondary}{HTML}{4A6FA5}
+\definecolor{sfAccent}{HTML}{2E86AB}
+\definecolor{sfLight}{HTML}{F4F6F8}
+\definecolor{sfText}{HTML}{1A1A2E}
+
+% Box accent colors
+\definecolor{boxBlue}{HTML}{2C3E6B}
+\definecolor{boxRed}{HTML}{C0392B}
+\definecolor{boxGreen}{HTML}{1E8449}
+\definecolor{boxOrange}{HTML}{D35400}
+\definecolor{boxGold}{HTML}{B7950B}
+
+% --- Slide geometry -------------------------------------------------------
+% Madrid default is 1em (~4mm) — increase for visual breathing room
+\setbeamersize{text margin left=7mm,text margin right=7mm}
+
+% --- Apply colors to Beamer elements --------------------------------------
+\setbeamercolor{palette primary}{bg=sfPrimary, fg=white}
+\setbeamercolor{palette secondary}{bg=sfSecondary, fg=white}
+\setbeamercolor{palette tertiary}{bg=sfAccent, fg=white}
+\setbeamercolor{palette quaternary}{bg=sfPrimary, fg=white}
+\setbeamercolor{structure}{fg=sfPrimary}
+\setbeamercolor{frametitle}{bg=sfPrimary, fg=white}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{author}{fg=sfText}
+\setbeamercolor{date}{fg=sfText}
+\setbeamercolor{institute}{fg=sfText}
+\setbeamercolor{block title}{bg=sfSecondary, fg=white}
+\setbeamercolor{block body}{bg=sfLight, fg=sfText}
+\setbeamercolor{itemize item}{fg=sfSecondary}
+\setbeamercolor{itemize subitem}{fg=sfAccent}
+\setbeamercolor{enumerate item}{fg=sfSecondary}
+\setbeamercolor{section in toc}{fg=sfPrimary}
+\setbeamercolor{subsection in toc}{fg=sfSecondary}
+
+% --- Fonts in Beamer elements ---------------------------------------------
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{block title}{size=\normalsize, series=\bfseries}
+
+% --- Navigation / footline cleanup ----------------------------------------
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,left,leftskip=4pt]{palette primary}%
+      \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{palette secondary}%
+      \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right,rightskip=4pt]{palette primary}%
+      \usebeamerfont{date in head/foot}%
+      \insertframenumber{} / \inserttotalframenumber
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+% --- Itemize bullet style -------------------------------------------------
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\triangleright$}}
+
+% --- Utility packages -----------------------------------------------------
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% --- Bibliography ---------------------------------------------------------
+\usepackage[backend=bibtex,
+            style=authoryear-comp,
+            maxcitenames=2,
+            maxbibnames=5,
+            uniquelist=false,
+            doi=false,
+            isbn=false,
+            url=false]{biblatex}
+\addbibresource{../Bibliography_base.bib}
+\renewcommand*{\bibfont}{\footnotesize}
+
+% ==============================================================================
+% CUSTOM BOX ENVIRONMENTS
+% ==============================================================================
+
+% --- keybox: Blue border box — Conceptos clave ----------------------------
+\newtcolorbox{keybox}[1][Concepto clave]{
+  enhanced,
+  colback=sfLight,
+  colframe=boxBlue,
+  fonttitle=\bfseries\small,
+  title=#1,
+  boxrule=1.2pt,
+  arc=2pt,
+  left=4pt, right=4pt, top=4pt, bottom=4pt
+}
+
+% --- definitionbox: Red left-accent — Definición --------------------------
+\newtcolorbox{definitionbox}[1][Definición]{
+  enhanced,
+  colback=white,
+  colframe=boxRed,
+  fonttitle=\bfseries\small\color{white},
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={colback=boxRed, arc=2pt, boxrule=0pt},
+  title=#1,
+  borderline west={3pt}{0pt}{boxRed},
+  boxrule=0.4pt,
+  arc=2pt,
+  left=6pt, right=4pt, top=6pt, bottom=4pt
+}
+
+% --- examplebox: Green left-accent — Ejemplo práctico ---------------------
+\newtcolorbox{examplebox}[1][Ejemplo]{
+  enhanced,
+  colback=white,
+  colframe=boxGreen!30,
+  fonttitle=\bfseries\small\color{white},
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={colback=boxGreen, arc=2pt, boxrule=0pt},
+  title=#1,
+  borderline west={3pt}{0pt}{boxGreen},
+  boxrule=0.4pt,
+  arc=2pt,
+  left=6pt, right=4pt, top=6pt, bottom=4pt
+}
+
+% --- warningbox: Orange filled — Errores comunes --------------------------
+\newtcolorbox{warningbox}[1][Atención]{
+  enhanced,
+  colback=boxOrange!10,
+  colframe=boxOrange,
+  fonttitle=\bfseries\small\color{white},
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={colback=boxOrange, arc=2pt, boxrule=0pt},
+  title=#1,
+  boxrule=1pt,
+  arc=2pt,
+  left=6pt, right=4pt, top=6pt, bottom=4pt
+}
+
+% --- exercisebox: Gold filled — Ejercicio ---------------------------------
+\newtcolorbox{exercisebox}[1][Ejercicio]{
+  enhanced,
+  colback=boxGold!10,
+  colframe=boxGold,
+  fonttitle=\bfseries\small\color{white},
+  coltitle=white,
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={colback=boxGold, arc=2pt, boxrule=0pt},
+  title=#1,
+  boxrule=1pt,
+  arc=2pt,
+  left=6pt, right=4pt, top=6pt, bottom=4pt
+}
+
+% ==============================================================================
+% END OF PREAMBLE
+% ==============================================================================
